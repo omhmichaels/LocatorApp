@@ -39,8 +39,29 @@ public:
 		dataSetFile.open(InputFileName);
 	}
         void setWriteFile(string fileName, ofstream writeFile){
-            writeFile.open(fileName, ios::app)
+            writeFile.open(fileName, ios::app);
         }
+        void writeToFile(string data, ofstream fileObject){
+            fileObject << data;
+        }
+   
+
+public:
+
+	// --------------------------
+	// BASIC FILE MANIPULATION
+	// Open the file stream for reading
+	void openDataSetFile(){
+		dataSetFile.open(InputFileName);
+	}
+        void setWriteFile(string fileName, ofstream writeFile){
+            writeFile.open(fileName, ios::app);
+        }
+        void writeToFile(string data, ofstream fileObject){
+            fileObject << data;
+        }
+
+
 	// Check if opened
 	int checkFileOpened() {
 		if (!dataSetFile) {
