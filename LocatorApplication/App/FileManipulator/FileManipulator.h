@@ -25,7 +25,6 @@ private:
 
 	// Class Object to create csv file for output
 	ofstream outputData;
-
 	// Vetor holding CSV Lines
 	vector<string> csvRows;
 
@@ -78,7 +77,7 @@ public:
 			getline(dataSetFile, row);
 
 			// Store ling as string in a vector 
-			csvRows.at(c) = row;
+			csvRows.push_back(row);
 
 			// Store as string
 			dataString = dataString.append(row);
@@ -89,6 +88,9 @@ public:
 	}
 
 };
+
+       void getPreppedData(string row){
+                 
 
 /*
 	void setDataString() {
