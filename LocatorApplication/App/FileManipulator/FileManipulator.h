@@ -34,10 +34,13 @@ public:
 
 	// --------------------------
 	// BASIC FILE MANIPULATION
-	// Open the file stream
+	// Open the file stream for reading
 	void openDataSetFile(){
 		dataSetFile.open(InputFileName);
 	}
+        void setWriteFile(string fileName, ofstream writeFile){
+            writeFile.open(fileName, ios::app)
+        }
 	// Check if opened
 	int checkFileOpened() {
 		if (!dataSetFile) {
