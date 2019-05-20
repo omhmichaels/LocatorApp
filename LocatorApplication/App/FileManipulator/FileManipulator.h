@@ -88,8 +88,16 @@ public:
 	}
 
 };
-
-       void getPreppedData(string row){
+       // Strips the input string at the specified delimiter.
+       void getCsvElements(string row, char delimiter){ 
+                vector<string> elementDataSet;
+                string element;
+                istringstream rowStream(row);
+                while (getline(rowStream, element, delimiter)){
+                    elementDataSet.push_back(element);
+                }
+              return elementDataSet;
+        }
                  
 
 /*
